@@ -14,12 +14,12 @@ public class JSAlertsPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(css = ".ul>li:nth-child(28)")
+    @FindBy(css = "//a[.='JavaScript Alerts']")
     WebElement jsAlert;
 
     public JSAlertsPage switchToNextWindow(int index) {
 
-        clickWithJS(jsAlert, 0, 300);
+        clickWithJS(jsAlert, 0, 600);
         List<String> pages = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(pages.get(index));
         return this;
