@@ -14,23 +14,19 @@ public class JSAlertsPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(css = "//a[.='JavaScript Alerts']")
-    WebElement jsAlert;
-
-    public JSAlertsPage switchToNextWindow(int index) {
-
-        clickWithJS(jsAlert, 0, 600);
-        List<String> pages = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(pages.get(index));
-        return this;
-    }
-
-    @FindBy(css = "h3")
-    WebElement h3;
-    public JSAlertsPage verifyNewPageMessage(String text) {
-        Assert.assertTrue(shouldHaveText(h3,text, 10));
+    @FindBy(css = "li:nth-child(1)")
+    WebElement windowJSAlert;
+    public JSAlertsPage clickForJSAlert() {
+        click(windowJSAlert);
         return this;
     }
 
 
+//    @FindBy(css="a[href='/javascript_alerts']")
+//    WebElement javascriptAlerts;
+//    public JSAlertsPage selectJSAlert () {
+//        clickWithJS(javascriptAlerts, 0,600);
+//        return new JSAlertsPage(driver);
+//    }
+//
 }
