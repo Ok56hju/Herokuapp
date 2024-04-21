@@ -1,0 +1,4 @@
+com\herokuapp\tests\JSAlertsTests.class
+com\herokuapp\tests\MultipleWindowsTest.class
+com\herokuapp\tests\TestBase.class
+com\herokuapp\tests\BrokenImagesTest.class

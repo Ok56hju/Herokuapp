@@ -10,11 +10,23 @@ public class HomePage extends BasePage{
     }
 
     @FindBy(css="a[href='/javascript_alerts']")
-    WebElement javascriptAlerts;
-
-    public HomePage selectJSAlert() {
-        click(javascriptAlerts);
-        return new HomePage(driver);
+    WebElement elementJSAlert;
+    public JSAlertsPage selectJSAlert() {
+        click(elementJSAlert);
+        return new JSAlertsPage(driver);
     }
 
+    @FindBy(css = "a[href='/windows']")
+    WebElement windows;
+    public MultipleWindowsPage selectMultipleWindows() {
+        click(windows);
+        return new MultipleWindowsPage(driver);
+    }
+
+    @FindBy(css = "a[href='/broken_images']")
+    WebElement broken_images;
+    public BrokenImagesPage selectBrokenImages() {
+        click(broken_images);
+        return new BrokenImagesPage(driver);
+    }
 }

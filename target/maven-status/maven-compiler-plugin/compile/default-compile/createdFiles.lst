@@ -1,0 +1,5 @@
+com\herokuapp\pages\BasePage.class
+com\herokuapp\pages\BrokenImagesPage.class
+com\herokuapp\pages\JSAlertsPage.class
+com\herokuapp\pages\MultipleWindowsPage.class
+com\herokuapp\pages\HomePage.class
